@@ -1,0 +1,33 @@
+<ids-container language="en" locale="en-US" padding="0" hidden background-color="--ids-homepage-color-background-default" animated>
+  <ids-header>
+    <ids-toolbar>
+      <ids-toolbar-section type="title">
+        <ids-text font-size="20" type="h1">Angular + Ids Web Component Examples</ids-text>
+      </ids-toolbar-section>
+      <ids-toolbar-section align="end" type="button">
+        <ids-theme-switcher mode="light"></ids-theme-switcher>
+      </ids-toolbar-section>
+    </ids-toolbar>
+  </ids-header>
+
+  <ids-layout-grid auto-fit="true" gap="md" padding="md">
+    <ids-layout-grid-cell>
+      <ids-block-grid>
+        @for (route of routes; track route.path) {
+          <ng-container>
+            @if (route.path !== '') {
+              <ids-block-grid-item>
+                <ids-card [attr.actionable]="'true'" routerLink="{{route.path}}" href="{{route.path}}" target="_self" [attr.height]="100">
+                  <div slot="card-content">
+                    <ids-text font-size="16" [attr.type]="'h2'" font-weight="bold">{{route.data.title}}</ids-text>
+                    <ids-text font-size="16" type="p">{{route.data.description}}</ids-text>
+                  </div>
+                </ids-card>
+              </ids-block-grid-item>
+            }
+          </ng-container>
+        }
+      </ids-block-grid>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+</ids-container>

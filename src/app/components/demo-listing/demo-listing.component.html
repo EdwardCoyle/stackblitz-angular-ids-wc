@@ -1,0 +1,20 @@
+<ids-container language="en" locale="en-US" padding="0" hidden>
+  <ids-header>
+    <ids-toolbar>
+      <ids-toolbar-section type="title">
+        <ids-text font-size="20" type="h1">{{title}}</ids-text>
+      </ids-toolbar-section>
+      <ids-toolbar-section align="end" type="button">
+        <ids-theme-switcher mode="light"></ids-theme-switcher>
+      </ids-toolbar-section>
+    </ids-toolbar>
+  </ids-header>
+  
+  <ids-layout-grid auto-fit="true" gap="md" padding="md">
+    <ids-layout-grid-cell>
+      <ids-data-grid #table list-style="true"></ids-data-grid>
+    </ids-layout-grid-cell>
+  </ids-layout-grid>
+
+  
+</ids-container>
